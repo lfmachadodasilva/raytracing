@@ -1,0 +1,35 @@
+T2 - Rastreamento de Raios
+
+Atenção: Estas páginas serão constantemente atualizadas durante o curso. Última atualização: 09/21/2010
+
+O programa fornecido foi feito pelos alunos dos anos anteriores implementando o algoritmo de Traçado de Raios.  
+Ele lê arquivos (*.rt4) que contém a descrição de uma cena (câmera, objetos e luzes) e gera uma imagem no canvas 
+que pode ser salva num arquivo.  O objetivo inicial deste programa era o de ser didático, facilitando o aprendizado 
+do algoritmo.  Ocorre, entretanto, que ele ficou muito lento. O que é pedido este ano é que cada grupo (de uma ou 
+duas pessoas) refaça o programa trocando os TADs (Tipos Abstratos de Dados) de algebra e cor.  Nestes novos modulos 
+os tipos:
+
+O tipo Vector deixa de existir e passa a ser representado por um vetor de 4 doubles.  
+Assim, por exemplo, "double v[4];" declara um vetor onde sigifica que v[0] é o x, v[1] é o y, v[2] é o z,
+e v[3] a coordenada homogenea w (suposto valer 1.0). 
+Implemente o modulo de forma que possamos tratar de vetores no plano com v[2]=0.
+O tipo Quat (quaternio) deixa de existir e passa a ser representado por um vetor de 4 doubles.  
+Assim, por exemplo, "double q[4];" sigifica que q[0] é a componente real, (v[1], v[2] , v[3]) são as coordenadas 
+imaginárias.
+O tipo Matrix deixa de existir. Uma matriz passa a ser representada por um vetor de 16 doubles.
+A ordem dos coeficientes é "por colunas" , como o OpenGL
+O tipo Color deixa de existir e passa a ser representado por um vetor de 4 doubles.  
+Assim, por exemplo, "double c[4];" declara um vetor onde sigifica que c[0] é o vermelho, c[1] o verde e c[2] o azul.
+Melhorar os algoritmos de inteseção dos objetos (veja o artigo de Moller e Trumbore)
+Colocar os objetos numa estrutura espacial tipo KdTree ou Grid para otimizar o cálculo das interseções [opcional].
+O grupo também pode dar contribuições na melhoria da qualidade da imagem:
+
+Sombras suaves.
+Texturas de rugosidade, deslocamento e/ou ambiênte.
+Rastreamento distibuído com tratamento de anti-alias.
+Exibição progressiva.
+Simulação de Iluminação Global.
+...
+Dicas:
+
+O arquivo manual.rt4 dá para uma breve descrição deste formato. 
